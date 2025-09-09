@@ -18,7 +18,6 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './services/auth.guard';
@@ -34,7 +33,6 @@ import { NewsService } from './services/news.service';
     TopbarComponent,
     SidebarComponent,
     LoginComponent,
-    RegisterComponent,
     HomeComponent,
     ProfileComponent,
     LoadingComponent,
