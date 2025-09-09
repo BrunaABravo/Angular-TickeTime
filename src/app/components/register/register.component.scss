@@ -1,0 +1,43 @@
+@import '../../../styles/global-styles.scss';
+
+.register-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}

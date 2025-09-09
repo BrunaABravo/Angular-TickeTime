@@ -1,0 +1,20 @@
+@import '../../../styles/global-styles.scss';
+
+.topbar {
+  display: flex;
+  align-items: center;
+
+  .topbar-logo {
+    height: auto;
+    max-height: 50px; /* Limite máximo para o logotipo */
+    margin-left: 1rem;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  button {
+    margin-right: 1rem;
+  }
+}

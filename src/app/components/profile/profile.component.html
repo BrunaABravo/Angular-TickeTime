@@ -1,0 +1,16 @@
+<div class="profile-container">
+  <h1>Informações do Perfil</h1>
+  <div class="profile-grid">
+    <mat-card class="profile-card" *ngFor="let item of profileItems">
+      <mat-card-content>
+        <div class="profile-item">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <div class="profile-text">
+            <strong>{{ item.label }}</strong>
+            <span>{{ item.value }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

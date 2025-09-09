@@ -1,0 +1,29 @@
+<div class="sidebar-header">
+  <img [src]="profileImage" alt="Profile" class="profile-img" *ngIf="profileImage">
+  <h2 class="clickable" (click)="navigateToProfile()">{{ secondName }}</h2>
+  <p>{{ title }}</p>
+</div>
+<mat-nav-list>
+  <a mat-list-item routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </a>
+  <mat-accordion [multi]="false">
+    <mat-expansion-panel *ngFor="let menu of menus; let i = index" [expanded]="expandedIndex === i" (opened)="togglePanel(i)">
+      <mat-expansion-panel-header>
+        <mat-icon>{{ menu.icon }}</mat-icon>
+        <span>{{ menu.title }}</span>
+      </mat-expansion-panel-header>
+      <mat-nav-list *ngFor="let submenu of menu.submenus">
+        <a mat-list-item routerLink="{{ submenu.link }}">
+          <mat-icon>{{ submenu.icon }}</mat-icon>
+          <span>{{ submenu.title }}</span>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <a mat-list-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </a>
+</mat-nav-list>
