@@ -1,111 +1,102 @@
-@import '../../../styles/global-styles.scss';
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: $background-color;
+/* Layout geral */
+.auth-wrapper{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f4f4f4;
+  padding:24px;
 }
 
-.login-form {
-  background: white;
-  padding: 3rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
+/* Cartão */
+.login-card{
+  width: 520px;
+  max-width: 100%;
+  background:#D6EFCD;            /* verde claro do cartão */
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.1);
+  padding:36px 40px;
 }
 
-.logo-container {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Cabeçalho */
+.card-header{
+  text-align:center;
+  color:#2A7408;
+  margin-bottom:6px;
+}
+.ticket-icon{
+  font-size:28px;
+  line-height:1;
+  display:block;
+  margin:0 auto 8px;
+}
+.app-title{
+  margin:0 0 6px;
+  font-size:22px;
+  letter-spacing:.5px;
+  font-weight:700;
+}
+.subtitle{
+  margin:0 0 22px;
+  font-size:16px;
+  color:#2A7408;
 }
 
-.logo {
-  max-width: 200px;
-  transition: opacity 1s ease-in-out;
+/* Formulário */
+.form-group{ margin-top:14px; }
+label{
+  display:block;
+  font-weight:600;
+  color:#2A7408;
+  margin-bottom:6px;
+}
+input{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid #cfe5cf;
+  border-radius:6px;
+  background:#fff;
+  outline:none;
+}
+input:focus{
+  border-color:#73b773;
+  box-shadow:0 0 0 3px rgba(115,183,115,.2);
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
-  position: relative;
+/* Campo senha + botão olho */
+.password-container{ position:relative; }
+.toggle-pass{
+  position:absolute;
+  top:50%;
+  right:4px;
+  transform:translateY(-50%);
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+/* Link “Esqueceu-se da Senha” */
+.forgot-link{
+  display:inline-block;
+  margin-top:8px;
+  margin-left:auto;
+  color:#2A7408;
+  text-decoration:none;
+  font-size:.95rem;
+  float:right;
 }
 
-.form-group input,
-button[type="submit"] {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+/* Botão principal */
+.submit-btn{
+  display:block;
+  width:65%;
+  margin-top:28px;
+  background:#2A7408;
+  color:#f4f4f4;
+  border:none;
+  border-radius:10px;
+  padding:14px 16px;
+  font-weight:700;
+  cursor:pointer;
 }
-
-.password-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.password-container input {
-  padding-right: 2.5rem; /* Add padding to the right to make space for the icon */
-}
-
-.password-container button {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-button[type="submit"] {
-  background-color: $primary-color;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.loading {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.links {
-  text-align: center;
-  margin-top: 1.5rem;
-}
-
-.links a {
-  color: $secondary-color;
-  text-decoration: none;
-  transition: color 0.3s;
-
-  &:hover {
-    color: darken($secondary-color, 10%);
-  }
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
+.submit-btn:disabled{
+  opacity:.7;
+  cursor:not-allowed;
 }

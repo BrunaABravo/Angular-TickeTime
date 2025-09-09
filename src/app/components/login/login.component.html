@@ -1,27 +1,51 @@
-<div class="login-container">
-  <div class="login-form animate-fade-in">
-    <div class="logo-container">
-      <img src="assets/images/LogoIpoint.png" alt="Logo Ipoint" class="logo"/>
+<div class="auth-wrapper">
+  <div class="login-card animate-fade-in">
+    <div class="card-header">
+      <mat-icon class="ticket-icon" aria-hidden="true">confirmation_number</mat-icon>
+      <h1 class="app-title">TICKETTIME</h1>
+      <p class="subtitle">Introduza abaixo as suas credenciais de acesso:</p>
     </div>
-    <form (ngSubmit)="login()">
+
+    <form (ngSubmit)="login()" class="form">
       <div class="form-group">
-        <label for="username">Utilizador</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+        <label for="username">Nome de utilizador</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="username"
+          name="username"
+          required
+        />
       </div>
+
       <div class="form-group">
-        <label for="password">Palavra-passe</label>
+        <label for="password">Senha</label>
         <div class="password-container">
-          <input [type]="passwordFieldType" id="password" [(ngModel)]="password" name="password" required>
-          <button type="button" mat-icon-button (click)="togglePasswordVisibility()">
-            <mat-icon>{{passwordFieldType === 'password' ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <input
+            [type]="passwordFieldType"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+          <button
+            type="button"
+            mat-icon-button
+            class="toggle-pass"
+            (click)="togglePasswordVisibility()"
+            [attr.aria-label]="passwordFieldType === 'password' ? 'Mostrar palavra-passe' : 'Ocultar palavra-passe'"
+          >
+            <mat-icon>{{ passwordFieldType === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
           </button>
         </div>
+        <a routerLink="/recover-password" class="forgot-link">Esqueceu-se da Senha</a>
       </div>
-      <button type="submit" [disabled]="isLoading">Entrar</button>
+
+      <button type="submit" class="submit-btn" [disabled]="isLoading">
+        Entrar em sessão
+      </button>
     </form>
+
     <app-loading *ngIf="isLoading"></app-loading>
-    <div class="links">
-      <a routerLink="/register">Registar</a> | <a routerLink="/recover-password">Esqueceu-se da palavra-passe?</a>
-    </div>
   </div>
 </div>
