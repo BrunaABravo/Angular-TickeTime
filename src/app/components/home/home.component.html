@@ -1,27 +1,3 @@
 <div class="home">
-  <div class="dashboard">
-    <!-- Seção de Mensagens -->
-    <div class="messages">
-      <h2>Mensagens</h2>
-      <div class="message-card" *ngFor="let message of messages">
-        <h3>{{ message.title }}</h3>
-        <p>{{ message.content }}</p>
-      </div>
-    </div>
-
-    <!-- Notícias Recentes -->
-    <div class="news">
-      <h2>Notícias Recentes</h2>
-      <div class="news-grid">
-        <div class="news-card" *ngFor="let newsItem of news">
-          <div class="news-content">
-            <p class="news-author" *ngIf="newsItem.author">{{ newsItem.author }}</p>
-            <h3>{{ newsItem.title }}</h3>
-            <p class="news-description">{{ newsItem.description }}</p>          
-          </div>
-          <a class="news-url" [href]="newsItem.url" target="_blank">Leia mais</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 </div>

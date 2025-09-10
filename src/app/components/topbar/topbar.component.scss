@@ -3,10 +3,12 @@
 .topbar {
   display: flex;
   align-items: center;
+  background-color: rgba(214, 239, 205, 1);
+
 
   .topbar-logo {
     height: auto;
-    max-height: 50px; /* Limite máximo para o logotipo */
+    max-height: 200px; 
     margin-left: 1rem;
   }
 
@@ -14,7 +16,21 @@
     flex: 1 1 auto;
   }
 
-  button {
-    margin-right: 1rem;
-  }
+  .mdc-icon-button {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    fill: rgba(48, 68, 57, 255);
+    color: rgba(48, 68, 57, 255);
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 0;
+    overflow: visible;
+}
+
+
 }
