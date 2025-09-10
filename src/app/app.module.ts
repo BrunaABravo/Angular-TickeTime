@@ -16,14 +16,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutComponent } from './components/layout/layout.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './services/auth.guard';
 import { LoadingComponent } from './shared/components/loading/loading.component';
 import { MatCardModule } from '@angular/material/card';
-import { NewsService } from './services/news.service';
 
 
 @NgModule({
@@ -31,7 +29,6 @@ import { NewsService } from './services/news.service';
     AppComponent,
     LayoutComponent,
     TopbarComponent,
-    SidebarComponent,
     LoginComponent,
     HomeComponent,
     ProfileComponent,
@@ -55,7 +52,7 @@ import { NewsService } from './services/news.service';
     MatCheckboxModule,
     MatCardModule,
   ],
-  providers: [AuthGuard, NewsService],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
