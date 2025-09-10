@@ -22,6 +22,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './services/auth.guard';
 import { LoadingComponent } from './shared/components/loading/loading.component';
 import { MatCardModule } from '@angular/material/card';
+import { MeusComponent } from './components/meus/meus.component';
+import { ListaComponent } from './components/lista/lista.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { MatCardModule } from '@angular/material/card';
     LoginComponent,
     HomeComponent,
     ProfileComponent,
-    LoadingComponent
+    LoadingComponent,
+    MeusComponent,
+    ListaComponent
     
   ],
   imports: [
